@@ -47,7 +47,7 @@ Route::put('/updateuser/{id}' , function (Request $data, $id){//recebendo dados 
     echo "Chama!";
 }); 
 
-Route::get('/delete{id}', function ($id){ //getuserbyid e ja deleta auto qnd coloca a url
+Route::get('/delete{id}', function ($id){ //getuserbyid e ja deleta automatico qnd coloca a url
     $usuario = Uzer::findOrFail($id);
     $usuario->delete();
     echo "Excluido!";
