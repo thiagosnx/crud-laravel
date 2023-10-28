@@ -5,9 +5,11 @@ use Illuminate\Http\Request;
 use App\Models\Uzer;
 use App\Http\Controllers\UserController;
 
-Route::get('/', [UserController::class, 'index'] );
+Route::get('/singup', [UserController::class, 'index'] );
 
-Route::post('/register', [UserController::class, 'createUser']);  
+Route::post('/register', [UserController::class, 'store']);  
+
+Route::get('/login', [UserController::class, 'login']);
 
 Route::get('/users', [UserController::class, 'allUsers'] ); 
 

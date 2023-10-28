@@ -6,7 +6,7 @@
     <title>CRUD</title>
 </head>
 <body>
-    <form action="/register" method="POST">
+    <form action="/login" method="POST">
         @csrf 
         <!-- token de segurança exigido para post do laravel (so funciona com blade) -->
         <label for="">Nome:</label>
@@ -16,7 +16,9 @@
         <label for="">Email:</label>
         <input type="text" placeholder="email" name="email">
         <br>
-        <button>Cadastrar</button>        
+        <button>Entrar</button>        
+        <br>
+        <a href="/users">Voltar</a>
 </form>
 </body>
 </html>
